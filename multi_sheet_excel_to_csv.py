@@ -7,7 +7,7 @@ abs = os.path.abspath(__file__)
 dir = os.path.dirname(abs)
 os.chdir(dir)
 
-# Bulk convert sheets in all xlsx to csv and use sheet names for new files
+# Bulk convert all xlsx sheets to csv and use sheet titles for new file names
 for excel_file in glob('*.xlsx'):
     print(excel_file)
     df = pd.read_excel(excel_file, sheet_name=None)
