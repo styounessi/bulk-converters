@@ -12,4 +12,4 @@ for excel_file in glob('*.xlsx'):
     print(excel_file)
     df = pd.read_excel(excel_file, sheet_name=None)
     for key in df.keys():
-        df[key].to_csv('%s.csv' %key)
+        df[key].to_csv('%s.csv' %key, index=None, header=True)
