@@ -13,4 +13,4 @@ for excel_file in glob('*.xlsx'):
     df = pd.read_excel(excel_file, sheet_name=None)
     name = os.path.splitext(excel_file)[0]
     for key in df.keys():
-        df[key].to_csv('%s_%s.csv' %(name, key), index=None, header=True)
+        df[key].to_csv(f'{name}_{key}.csv', index=None, header=True)
